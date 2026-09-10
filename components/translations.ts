@@ -1,0 +1,50 @@
+export const translations = {
+    en: {
+        topAlert: "Check the latest travel entry requirements for your destination.",
+        logoTagline: "your path to exploration",
+        navHome: "Book", navServices: "Manage", navDestinations: "Experience", navContact: "Help",
+        heroSubtitle: "Welcome to Luxury Exploration",
+        heroTitle: "Where luxury meets cultural discovery.",
+        heroDesc: "Experience global ticketing standards combined with exclusive private bespoke journeys across Ethiopia and the rest of the world.",
+        tabFlights: "Flights", tabVisa: "Visa Services", tabTours: "Holidays",
+        lblFrom: "From", lblDest: "Where do you want to go?", lblPhone: "Phone Number", btnSubmit: "Send Request",
+        servicesTitle: "Exceptional Experiences with Anan Travel",
+        servicesSubtitle: "Explore the world, plan customized routes, and experience unmatched hospitality framework design.",
+        srv1Title: "Flight Booking", srv1Desc: "Domestic and international flight ticketing with competitive rates on Ethiopian Airlines and worldwide carriers.",
+        srv2Title: "Visa Consultancy", srv2Desc: "Professional assistance for tourist, business, and study visa applications to smooth your journey.",
+        srv3Title: "Tour Packages", srv3Desc: "Curated cultural and historical tours across Lalibela, Gondar, Aksum, and beautiful natural destinations.",
+        newsTitle: "Subscribe, be inspired, travel", newsSubtitle: "Receive exclusive pathways information about new global packages and itineraries."
+    },
+    am: {
+        topAlert: "ለመድረሻዎ ወቅታዊ የጉዞ መግቢያ መስፈርቶችን እዚህ ያረጋግጡ።",
+        logoTagline: "የፍለጋዎ መገስገሻ መንገድ",
+        navHome: "ይዘዙ", navServices: "ያስተዳድሩ", navDestinations: "ልምድ", navContact: "እገዛ",
+        heroSubtitle: "እንኳን ወደ የቅንጦት ፍለጋ በደህና መጡ",
+        heroTitle: "ቅንጦት ከባህላዊ ግኝት ጋር የሚገናኝበት።",
+        heroDesc: "በኢትዮጵያ እና በዓለም ዙሪያ ካሉ ልዩ የግል የተበጁ ጉዞዎች ጋር ተጣምሮ ዓለም አቀፍ የቲኬት ደረጃዎችን ይለማመዱ።",
+        tabFlights: "በረራዎች", tabVisa: "የቪዛ አገልግሎት", tabTours: "ዕረፍት",
+        lblFrom: "መነሻ", lblDest: "የት መጓዝ ይፈልጋሉ?", lblPhone: "ስልክ ቁጥር", btnSubmit: "መልዕክት ላክ",
+        servicesTitle: "ልዩ ተሞክሮዎች ከአናን ትራቭል ጋር",
+        servicesSubtitle: "ዓለምን ያስሱ፣ ብጁ መስመሮችን ያቅዱ እና ወደር የለሽ የእንግዳ ተቀባይነት አገልግሎት ያግኙ።",
+        srv1Title: "የበረራ ትኬት መቁረጥ", srv1Desc: "የሀገር ውስጥ እና የዓለም አቀፍ በረራ ትኬቶችን በኢትዮጵያ አየር መንገድ እና በሌሎች ዓለም አቀፍ አየር መንገዶች በተመጣጣኝ ዋጋ እናቀርባለን።",
+        srv2Title: "የቪዛ ማማከር አገልግሎት", srv2Desc: "ጉዞዎን ቀልጣፋ ለማድረግ ለቱሪስት፣ ለንግድ ስራ እና ለትምህርት ቪዛ ማመልከቻዎች ሙያዊ እገዛ እናደርጋለን።",
+        srv3Title: "የጉብኝት ጥቅሎች", srv3Desc: "በላሊበላ፣ በጎንደር፣ በአክሱም እና ውብ በሆኑ የተፈጥሮ መስህቦች ዙሪያ የተዘጋጁ ባህላዊ እና ታሪካዊ ጉብኝቶች።",
+        newsTitle: "ይመዝገቡ፣ ተነሳሽነት ያግኙ፣ ይጓዙ", newsSubtitle: "ስለ አዳዲስ ዓለም አቀፍ ፓኬጆች እና የጉዞ መስመሮች ልዩ መረጃዎችን ያግኙ።"
+    },
+    om: {
+        topAlert: "Ulaagaalee seenansa imala qorannoo keessanii battalatti mirkaneeffadhaa.",
+        logoTagline: "daandii keessan gara daawwannaatti",
+        navHome: "Qabadhaa", navServices: "Hojjadhaa", navDestinations: "Muxannoo", navContact: "Gargaarsa",
+        heroSubtitle: "Gara Daawwanna Giddugaleessa Qabeenyaatti Bagas Deebitan",
+        heroTitle: "Iddoo jireenyi qananii argannoo aadaa waliin walitti hisu.",
+        heroDesc: "Tajaajila tikeetii idil-addunyaa qulqullina qabu ka'umsa imala dhuunfaa qophaaye waliin Itiyoophiyaafi guutuu addunyaa keessatti dhandhamadhaa.",
+        tabFlights: "Balali'insa", tabVisa: "Tajaajila Vaayizaa", tabTours: "Boqonnaa",
+        lblFrom: "Ka'umsa", lblDest: "Eessa deemuun fedhu?", lblPhone: "Lakk. Bilbilaa", btnSubmit: "Ergaa Ergi",
+        servicesTitle: "Muxannoo Addaa Anan Travel Waliin",
+        servicesSubtitle: "Addunyaa daawwadhaa, karoora imala dhuunfaa qopheeffadhaa, tajaajila simannaa hiriira hin qabne argadhaa.",
+        srv1Title: "Tikeetii Xayyaaraa", srv1Desc: "Tikeetii balali'insa biyya keessaafi biyya alaa Daandii Qilleensa Itiyoophiyaafi dhaabbilee addunyaa biroo hunda waliin gatii madaalawaan.",
+        srv2Title: "Gorsa Vaayizaa", srv2Desc: "Gargaarsa ogummaa vaayizaa daawwannaa, daldalaafi barumsaa adeemsa keessan salphisuuf.",
+        srv3Title: "Sagantaa Daawwannaa", srv3Desc: "Daawwannaa aadaafi seenaa Lalibela, Gondar, Aksum fi bakkeewwan uumama bareedoo biroo irratti qophaaye.",
+        newsTitle: "Galmaa'aa, kaka'umsa argadhaa, imalaa", newsSubtitle: "Waa'ee koota haaraafi daandiiwwan imala addunyaa irratti odeeffannoo dhuunfaa argadhaa."
+    }
+} as const;
