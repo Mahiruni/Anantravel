@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@400;500;600;700&display=swap');
+
+:root{--et-navy:#071827;--et-cream:#f4efe6;--et-gold:#cba86a;--et-green:#2e6b4c;--et-red:#9d3e32}
+
+html,body{font-family:'Manrope','Noto Sans Ethiopic',sans-serif}
+h1,h2,h3,.booking-heading h2,.package h3,.about-copy .intro,.quotes blockquote,.quote-mark,.newsletter h3,.support-inner h2,.contact-card h3{font-family:'Cormorant Garamond','Noto Serif Ethiopic',Georgia,serif}
+
+.hero{min-height:clamp(760px,100svh,960px);overflow:hidden;background:var(--et-navy);padding-top:132px;padding-bottom:150px}
+.hero-image{display:none!important}
+.hero-shade{inset:0;background:linear-gradient(90deg,rgba(5,18,29,.96) 0%,rgba(5,18,29,.8) 34%,rgba(5,18,29,.22) 64%,rgba(5,18,29,.1) 100%),linear-gradient(180deg,rgba(5,18,29,.15),rgba(5,18,29,.65));z-index:-3}
+.hero:before{content:"";position:absolute;inset:0;z-index:-4;background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Ethiopia_culture_55.jpg');background-size:cover;background-position:center right;transform:scale(1.02);filter:saturate(.9) contrast(1.03)}
+.hero:after{content:"";position:absolute;z-index:-2;top:8%;right:4.5%;width:min(47vw,690px);height:min(33vw,390px);background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/An%20Ethiopian%20Airlines%20Boeing%20787-8%20Dreamliner.jpg');background-size:cover;background-position:center;box-shadow:0 35px 80px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);transform:rotate(1.4deg);opacity:.98}
+.hero-content{position:relative;z-index:2;max-width:1240px}
+.hero .eyebrow.light{color:#d9bd89;letter-spacing:.24em}
+.hero h1{font-size:clamp(4.2rem,7.5vw,8.6rem);max-width:900px;line-height:.9;letter-spacing:-.055em;margin:24px 0 30px;text-wrap:balance}
+.hero h1 em{color:#e8d4ad}
+.hero-copy{max-width:575px;font-size:17px;line-height:1.8;color:#f0efe9}
+.hero-buttons{gap:24px;margin-top:38px}
+.hero-buttons .button.gold{background:#d2b070;color:#071827;padding:17px 25px}
+.hero-buttons .text-link{color:#fff}
+.hero-bottom{bottom:55px;z-index:3}
+.hero-bottom span:first-child{font-family:'Manrope',sans-serif;font-size:10px;letter-spacing:.22em}
+.hero-bottom span:nth-child(2){color:#e6e4dc}
+.hero-bottom:after{content:'Images: Endalkachew Getachew / Wikimedia Commons · Anna Zvereva / Wikimedia Commons';position:absolute;right:0;bottom:-22px;font-size:8px;letter-spacing:.02em;color:rgba(255,255,255,.62)}
+
+/* Ethiopian-language typesetting */
+html:lang(am) body,html:lang(am) button,html:lang(am) input,html:lang(am) select,html:lang(am) textarea{font-family:'Noto Sans Ethiopic','Manrope',sans-serif}
+html:lang(am) h1,html:lang(am) h2,html:lang(am) h3,html:lang(am) .booking-heading h2,html:lang(am) .package h3,html:lang(am) .about-copy .intro,html:lang(am) .quotes blockquote,html:lang(am) .support-inner h2,html:lang(am) .contact-card h3,html:lang(am) .newsletter h3{font-family:'Noto Serif Ethiopic','Cormorant Garamond',serif;letter-spacing:-.025em}
+html:lang(om) body,html:lang(om) button,html:lang(om) input,html:lang(om) select,html:lang(om) textarea{font-family:'Manrope','Noto Sans Ethiopic',sans-serif}
+html:lang(om) h1,html:lang(om) h2,html:lang(om) h3,html:lang(om) .booking-heading h2,html:lang(om) .package h3,html:lang(om) .about-copy .intro,html:lang(om) .quotes blockquote,html:lang(om) .support-inner h2,html:lang(om) .contact-card h3,html:lang(om) .newsletter h3{font-family:'Cormorant Garamond','Manrope',sans-serif;letter-spacing:-.035em}
+
+@media(max-width:800px){.hero{padding-top:126px;padding-bottom:145px}.hero:after{top:auto;right:18px;bottom:116px;width:53vw;height:29vw;max-height:210px}.hero:before{background-position:62% center}.hero-shade{background:linear-gradient(180deg,rgba(5,18,29,.82) 0%,rgba(5,18,29,.46) 34%,rgba(5,18,29,.7) 76%,rgba(5,18,29,.94) 100%)}.hero h1{font-size:clamp(4rem,12vw,6.4rem);max-width:690px}.hero-copy{max-width:480px}.hero-bottom{bottom:44px}.hero-bottom:after{right:auto;left:0;bottom:-18px;font-size:7px}}
+@media(max-width:640px){.hero{min-height:900px;padding-top:118px;padding-bottom:180px}.hero:after{right:14px;bottom:136px;width:72vw;height:43vw;max-height:235px}.hero h1{font-size:clamp(3.65rem,15vw,5.1rem);line-height:.95;max-width:100%}.hero-copy{font-size:15px;max-width:355px}.hero-buttons{gap:12px}.hero-bottom{bottom:47px}.hero-bottom span:nth-child(2){font-size:10px}.hero-bottom:after{bottom:-18px}.hero-content{width:calc(100% - 40px)} }
