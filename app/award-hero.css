@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@400;500;600;700&display=swap');
+
+:root{
+  --serif:'Cormorant Garamond','Noto Serif Ethiopic',Georgia,serif;
+  --sans:'Manrope','Noto Sans Ethiopic',Arial,sans-serif;
+}
+
+body,button,input,select,textarea{font-family:var(--sans)!important}
+h1,h2,h3,.about-copy .intro,.package h3,.quote-mark,.quotes blockquote,.contact-card h3,.newsletter h3{font-family:var(--serif)!important}
+
+html:lang(am) body,
+html:lang(am) button,
+html:lang(am) input,
+html:lang(am) select,
+html:lang(am) textarea{font-family:'Noto Sans Ethiopic','Manrope',sans-serif!important}
+html:lang(am) h1,
+html:lang(am) h2,
+html:lang(am) h3,
+html:lang(am) .about-copy .intro,
+html:lang(am) .package h3,
+html:lang(am) .quotes blockquote,
+html:lang(am) .contact-card h3,
+html:lang(am) .newsletter h3{font-family:'Noto Serif Ethiopic','Cormorant Garamond',serif!important;letter-spacing:-.025em}
+
+html:lang(om) body,
+html:lang(om) button,
+html:lang(om) input,
+html:lang(om) select,
+html:lang(om) textarea{font-family:'Manrope','Noto Sans Ethiopic',sans-serif!important}
+html:lang(om) h1,
+html:lang(om) h2,
+html:lang(om) h3,
+html:lang(om) .about-copy .intro,
+html:lang(om) .package h3,
+html:lang(om) .quotes blockquote,
+html:lang(om) .contact-card h3,
+html:lang(om) .newsletter h3{font-family:'Cormorant Garamond','Noto Serif Ethiopic',serif!important}
+
+/* Editorial Ethiopian hero: culture first, aviation second. */
+.hero{overflow:hidden;background:#172c40}
+.hero-image{opacity:0!important}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-4;
+  background-image:url('https://ethnomed.org/wp-content/uploads/2020/01/Tigrinya-women-768x521.jpg');
+  background-size:cover;
+  background-position:center 48%;
+  transform:scale(1.03);
+  filter:saturate(.95) contrast(1.03);
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  top:11%;
+  right:5.5%;
+  width:min(42vw,520px);
+  height:min(25vw,310px);
+  min-height:190px;
+  background-image:url('https://www.cph.dk/492e57/globalassets/9.-cph-business/5.-aviation/copenhagen-connection/article-photos/et_extended_1_1.jpeg?format=webp');
+  background-size:cover;
+  background-position:center 43%;
+  border:1px solid rgba(255,255,255,.58);
+  box-shadow:0 28px 80px rgba(6,22,34,.38),0 0 0 10px rgba(255,255,255,.05);
+  clip-path:polygon(8% 0,100% 0,100% 92%,92% 100%,0 100%,0 8%);
+  opacity:.98;
+  animation:hero-flight 14s ease-in-out infinite;
+}
+.hero-shade{background:linear-gradient(90deg,rgba(8,27,42,.92),rgba(8,27,42,.55) 54%,rgba(8,27,42,.16)),linear-gradient(0deg,rgba(8,27,42,.78),rgba(8,27,42,.03) 58%);}
+.hero-content,.hero-bottom{position:relative;z-index:2}
+.hero-bottom{position:absolute}
+.hero::marker{display:none}
+
+@keyframes hero-flight{0%,100%{transform:translate3d(0,0,0) rotate(-.4deg)}50%{transform:translate3d(-14px,8px,0) rotate(.35deg)}}
+
+@media(max-width:900px){
+  .hero::after{top:12%;right:5%;width:min(58vw,430px);height:min(32vw,230px);min-height:150px;opacity:.92}
+  .hero-content{padding-top:110px}
+}
+@media(max-width:640px){
+  .hero::after{top:11%;right:-10%;width:73vw;height:145px;min-height:0;opacity:.78}
+  .hero::before{background-position:63% center}
+  .hero-shade{background:linear-gradient(90deg,rgba(8,27,42,.93),rgba(8,27,42,.64) 62%,rgba(8,27,42,.24)),linear-gradient(0deg,rgba(8,27,42,.86),rgba(8,27,42,.08) 68%)}
+  html:lang(am) .hero h1{font-size:clamp(2.8rem,11vw,4.6rem)}
+}
+@media(prefers-reduced-motion:reduce){.hero::after{animation:none}}
