@@ -1,0 +1,4 @@
+.footer-bottom .hisabtech-credit{font-size:11px;letter-spacing:.04em;color:#9eacb6;white-space:nowrap;transition:color .2s,transform .2s;}
+.footer-bottom .hisabtech-credit strong{color:#dfe6eb;font-weight:650;}
+.footer-bottom .hisabtech-credit:hover{color:#fff;transform:translateY(-1px);}
+@media (max-width:720px){.footer-bottom .hisabtech-credit{width:100%;padding-top:10px;border-top:1px solid rgba(255,255,255,.08);white-space:normal;text-align:center;}}
