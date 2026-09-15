@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import './brand-cleanup.css';
 import './travel-hero.css';
+import './ananbot.css';
 import FullPageTranslator from '../components/full-page-translator';
+import AnanBot from '../components/anan-bot';
 
 export const metadata: Metadata = {
   title: 'ANAN TRAVEL | Your Pathway to Exploration',
@@ -18,5 +20,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body>{children}<FullPageTranslator /></body></html>;
+  return <html lang="en"><body>{children}<FullPageTranslator /><AnanBot /></body></html>;
 }
