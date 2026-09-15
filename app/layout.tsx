@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './brand-cleanup.css';
+import './award-hero.css';
 import FullPageTranslator from '../components/full-page-translator';
 
 export const metadata: Metadata = {
