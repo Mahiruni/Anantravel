@@ -1,8 +1,6 @@
 .brand-star{display:none!important}
 
 /* ANAN TRAVEL — premium, smooth hero system inspired by the calm editorial rhythm of SEWAB. */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@400;500;600;700&display=swap');
-
 body,button,input,select,textarea{font-family:'Manrope','Noto Sans Ethiopic',sans-serif!important}
 h1,h2,h3,.booking-heading h2,.package h3,.about-copy .intro,.quotes blockquote,.quote-mark,.newsletter h3,.support-inner h2,.contact-card h3{font-family:'Cormorant Garamond','Noto Serif Ethiopic',Georgia,serif!important}
 
@@ -27,7 +25,6 @@ h1,h2,h3,.booking-heading h2,.package h3,.about-copy .intro,.quotes blockquote,.
 .hero-bottom span:nth-child(2){font-size:12px!important;color:#61776e!important}
 .hero-bottom a{font-size:10px!important;color:#173d32!important;font-weight:800!important;letter-spacing:.13em!important}
 
-/* Language-specific premium typesetting */
 html:lang(am) body,html:lang(am) button,html:lang(am) input,html:lang(am) select,html:lang(am) textarea{font-family:'Noto Sans Ethiopic','Manrope',sans-serif!important}
 html:lang(am) h1,html:lang(am) h2,html:lang(am) h3,html:lang(am) .booking-heading h2,html:lang(am) .package h3,html:lang(am) .about-copy .intro,html:lang(am) .quotes blockquote,html:lang(am) .support-inner h2,html:lang(am) .contact-card h3,html:lang(am) .newsletter h3{font-family:'Noto Serif Ethiopic','Cormorant Garamond',serif!important;letter-spacing:-.025em!important}
 html:lang(om) body,html:lang(om) button,html:lang(om) input,html:lang(om) select,html:lang(om) textarea{font-family:'Manrope','Noto Sans Ethiopic',sans-serif!important}
@@ -35,28 +32,6 @@ html:lang(om) h1,html:lang(om) h2,html:lang(om) h3,html:lang(om) .booking-headin
 
 @keyframes anan-float{0%,100%{transform:translateY(0) rotate(2.5deg)}50%{transform:translateY(-13px) rotate(1.2deg)}}
 @keyframes anan-float-small{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(10px) rotate(-4deg)}}
-
-@media(max-width:900px){
-.hero{min-height:860px!important;padding-top:112px!important}
-.hero:before{top:-8vw!important;right:-20vw!important;width:75vw!important;height:75vw!important}
-.hero:after{right:4%!important;top:auto!important;bottom:112px!important;width:43vw!important;height:49vw!important;max-height:420px!important}
-.hero-content:before{right:calc(4% + 24px)!important;bottom:-130px!important;width:23vw!important;height:29vw!important;max-height:260px!important}
-.hero-content:after{right:1%!important;top:8%!important}
-.hero h1{font-size:clamp(4rem,10vw,7rem)!important;max-width:690px!important}
-}
-@media(max-width:640px){
-.hero{min-height:890px!important;padding-top:112px!important;padding-bottom:170px!important}
-.hero-shade{background:linear-gradient(180deg,#edf0e9 0%,#edf0e9 48%,rgba(237,240,233,.94) 73%,rgba(237,240,233,.8) 100%)!important}
-.hero:before{top:2%!important;right:-28%!important;width:92vw!important;height:92vw!important}
-.hero:after{right:9%!important;bottom:118px!important;width:58vw!important;height:63vw!important;max-height:330px!important;border-width:6px!important;border-radius:180px 180px 18px 18px!important}
-.hero-content:before{right:2%!important;bottom:-128px!important;width:29vw!important;height:36vw!important;max-height:185px!important;border-width:5px!important}
-.hero-content:after{right:0!important;top:4%!important;font-size:7px!important;letter-spacing:.16em!important}
-.hero h1{font-size:clamp(3.75rem,15vw,5.7rem)!important;line-height:.9!important;max-width:100%!important}
-.hero-copy{max-width:350px!important;font-size:14px!important}
-.hero-buttons{gap:10px!important;align-items:flex-start!important;flex-direction:column!important}
-.hero-bottom{bottom:42px!important}
-.hero-bottom span:nth-child(2){font-size:10px!important}
-.hero-bottom a{display:none!important}
-html:lang(am) .hero h1{font-size:clamp(2.7rem,11vw,4.4rem)!important;line-height:1.02!important}
-}
+@media(max-width:900px){.hero{min-height:860px!important;padding-top:112px!important}.hero:before{top:-8vw!important;right:-20vw!important;width:75vw!important;height:75vw!important}.hero:after{right:4%!important;top:auto!important;bottom:112px!important;width:43vw!important;height:49vw!important;max-height:420px!important}.hero-content:before{right:calc(4% + 24px)!important;bottom:-130px!important;width:23vw!important;height:29vw!important;max-height:260px!important}.hero-content:after{right:1%!important;top:8%!important}.hero h1{font-size:clamp(4rem,10vw,7rem)!important;max-width:690px!important}}
+@media(max-width:640px){.hero{min-height:890px!important;padding-top:112px!important;padding-bottom:170px!important}.hero-shade{background:linear-gradient(180deg,#edf0e9 0%,#edf0e9 48%,rgba(237,240,233,.94) 73%,rgba(237,240,233,.8) 100%)!important}.hero:before{top:2%!important;right:-28%!important;width:92vw!important;height:92vw!important}.hero:after{right:9%!important;bottom:118px!important;width:58vw!important;height:63vw!important;max-height:330px!important;border-width:6px!important;border-radius:180px 180px 18px 18px!important}.hero-content:before{right:2%!important;bottom:-128px!important;width:29vw!important;height:36vw!important;max-height:185px!important;border-width:5px!important}.hero-content:after{right:0!important;top:4%!important;font-size:7px!important;letter-spacing:.16em!important}.hero h1{font-size:clamp(3.75rem,15vw,5.7rem)!important;line-height:.9!important;max-width:100%!important}.hero-copy{max-width:350px!important;font-size:14px!important}.hero-buttons{gap:10px!important;align-items:flex-start!important;flex-direction:column!important}.hero-bottom{bottom:42px!important}.hero-bottom span:nth-child(2){font-size:10px!important}.hero-bottom a{display:none!important}html:lang(am) .hero h1{font-size:clamp(2.7rem,11vw,4.4rem)!important;line-height:1.02!important}}
 @media(prefers-reduced-motion:reduce){.hero:after,.hero-content:before{animation:none!important}}
