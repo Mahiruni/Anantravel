@@ -6,6 +6,7 @@ import './ananbot.css';
 import './hisabtech-credit.css';
 import FullPageTranslator from '../components/full-page-translator';
 import AnanBot from '../components/anan-bot';
+import FooterCredit from '../components/footer-credit';
 
 export const metadata: Metadata = {
   title: 'ANAN TRAVEL | Your Pathway to Exploration',
@@ -21,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body>{children}<FullPageTranslator /><AnanBot /></body></html>;
+  return <html lang="en"><body>{children}<FooterCredit /><FullPageTranslator /><AnanBot /></body></html>;
 }
