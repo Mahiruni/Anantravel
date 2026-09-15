@@ -3,6 +3,7 @@ import './globals.css';
 import './brand-cleanup.css';
 import './travel-hero.css';
 import './ananbot.css';
+import './hisabtech-credit.css';
 import FullPageTranslator from '../components/full-page-translator';
 import AnanBot from '../components/anan-bot';
 
