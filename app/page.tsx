@@ -1,2 +1,2 @@
-import TravelSite from '@/components/travel-site';
-export default function Home(){return <TravelSite/>}
+import HomePage from '@/components/home-page';
+export default function Home(){return <HomePage/>}
