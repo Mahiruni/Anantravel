@@ -27,6 +27,9 @@ const promptForStarter = (index: number, lang: Language) => {
   return prompts[lang][index];
 };
 
+const WHATSAPP_NUMBER = '251960555000';
+const whatsappUrl = (text: string) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
 export default function AnanBot() {
   const [open, setOpen] = useState(false);
   const [language, setLanguage] = useState<Language | null>(null);
@@ -92,7 +95,7 @@ export default function AnanBot() {
           <div className="ananbot-quick">{t.starter.map((label, index) => <button key={label} onClick={() => void sendMessage(promptForStarter(index, language))}>{label}</button>)}</div>
           <div ref={endRef}/>
         </div>
-        <div className="ananbot-actions"><button onClick={() => { setLanguage(null); setMessages([]); }}>{t.restart}</button><a href="https://wa.me/251924093037?text=Hello%20ANAN%20TRAVEL%2C%20I%20would%20like%20help%20with%20my%20journey." target="_blank" rel="noopener noreferrer"><MessageCircle size={14}/> {t.whatsapp}</a></div>
+        <div className="ananbot-actions"><button onClick={() => { setLanguage(null); setMessages([]); }}>{t.restart}</button><a href={whatsappUrl('Hello ANAN TRAVEL, I would like help with my journey.')} target="_blank" rel="noopener noreferrer"><MessageCircle size={14}/> {t.whatsapp}</a></div>
         <form className="ananbot-compose" onSubmit={submit}><input value={input} onChange={(e) => setInput(e.target.value)} placeholder={t.placeholder} aria-label={t.placeholder} maxLength={1200}/><button type="submit" disabled={!input.trim() || loading} aria-label="Send message"><Send size={17}/></button></form>
       </>}
     </aside>
