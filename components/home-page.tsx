@@ -42,10 +42,21 @@ export default function HomePage() {
             </div>
             <div className="ph-proof"><ShieldCheck size={18}/><span>Clear quotes · Local support · Human assistance</span></div>
           </div>
-          <div className="ph-hero-visual">
-            <div className="ph-orbit ph-orbit-one" />
-            <div className="ph-orbit ph-orbit-two" />
-            <div className="ph-hero-image-wrap"><Image src="/images/hero.jpg" alt="Airplane wing above clouds" fill priority sizes="(max-width: 900px) 100vw, 48vw" /></div>
+          <div className="ph-hero-visual" aria-label="ANAN global travel network">
+            <div className="ph-globe">
+              <div className="ph-globe-ring ph-globe-ring-a" />
+              <div className="ph-globe-ring ph-globe-ring-b" />
+              <div className="ph-globe-line ph-globe-line-a" />
+              <div className="ph-globe-line ph-globe-line-b" />
+              <span className="ph-node ph-node-add">ADD</span>
+              <span className="ph-node ph-node-dxb">DXB</span>
+              <span className="ph-node ph-node-jed">JED</span>
+              <span className="ph-node ph-node-lon">LON</span>
+              <span className="ph-node ph-node-dar">DAR</span>
+              <span className="ph-route ph-route-one" />
+              <span className="ph-route ph-route-two" />
+              <span className="ph-route ph-route-three" />
+            </div>
             <div className="ph-floating-card ph-card-route"><span>YOUR NEXT ROUTE</span><strong>ADD → DXB → JED</strong><small>One team. Every detail.</small></div>
             <div className="ph-floating-card ph-card-price"><span>LOCAL SUPPORT</span><strong>ETB</strong><small>Pay locally when available</small></div>
           </div>
