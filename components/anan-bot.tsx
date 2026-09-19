@@ -71,7 +71,7 @@ export default function AnanBot() {
 
   return <>
     <button className={`ananbot-launcher ${open ? 'is-open' : ''}`} aria-label={open ? 'Close AnanBot' : 'Open AnanBot'} aria-expanded={open} onClick={() => setOpen((value) => !value)}>
-      <span className="ananbot-launcher-orbit" aria-hidden="true">✦</span><Bot size={21} /><span className="ananbot-launcher-label">AnanBot</span><span className="ananbot-launcher-dot" aria-hidden="true" />
+      <span className="ananbot-launcher-orbit" aria-hidden="true">✦</span><Bot size={23} aria-hidden="true" /><span className="ananbot-launcher-dot" aria-hidden="true" />
     </button>
 
     <aside className={`ananbot ${open ? 'is-open' : ''}`} aria-label="AnanBot travel concierge">
