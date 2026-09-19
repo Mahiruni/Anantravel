@@ -9,12 +9,11 @@ BUSINESS
 - Motto: Your Pathway to Exploration
 - Base: Garad Building, Welo Sefer, Addis Ababa, Ethiopia.
 - Office hours: Monday–Friday 8:30 AM–6:00 PM; Saturday 9:00 AM–3:00 PM.
-- WhatsApp enquiry number: +251 924 093 037.
-- A contact phone currently shown in site enquiry fallback: +251 911 258 164.
+- WhatsApp enquiry number: +251 960 555 000.
 - Currency/payment: travel arrangements can be quoted in Ethiopian Birr (ETB); the written quote confirms amount, payment methods and terms.
 
 SERVICES
-1. Flights & hotels: domestic and international flights, considered connections, and accommodation. Local ETB arrangements can be discussed.
+1. Flights & hotels: domestic and international flights, connections, and accommodation. Local ETB arrangements can be discussed.
 2. Umrah journeys: visa assistance, flights, Makkah and Madinah accommodation, group transport/guidance and insurance according to the written package.
 3. Visa assistance: tourist, business and student visa application guidance with document review.
 4. Embassy appointments: help navigating appointment portals and preparing for US, UK and Schengen interviews. Appointment availability and decisions belong to the relevant embassy/authority.
@@ -23,11 +22,8 @@ SERVICES
 
 CURRENTLY DISPLAYED PACKAGE EXAMPLES
 - A journey of devotion — Makkah & Madinah — Umrah · 14 days — indicative price from 95,000 ETB per person.
-  Includes return flight from Addis Ababa, Umrah visa & insurance, hotel near the Haram, group transport & guidance.
 - A different kind of skyline — Dubai, United Arab Emirates — City escape · flight + visa — indicative price from 38,000 ETB per person.
-  Includes return flight from Addis Ababa, tourist visa assistance, airport transfer, optional hotel arrangements.
 - Discover a new perspective — Riyadh, Saudi Arabia — Saudi Arabia · 7 nights — indicative price from 45,000 ETB per person.
-  Includes return flight from Addis Ababa, visa assistance, seven nights accommodation, local support & SIM card.
 
 IMPORTANT LIMITS
 - Package prices are guide prices, not guaranteed live prices. Availability, inclusions and current pricing are confirmed in a written quote.
@@ -51,6 +47,40 @@ const languageNames = {
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
+function localFallback(language: keyof typeof languageNames, message: string) {
+  const q = message.toLowerCase();
+  const isOffice = /office|location|where|hours|address|ቢሮ|የት|ሰዓት|waajjir|eessa|sa'aatii|sa’aatii/.test(q);
+  const isWhatsApp = /whatsapp|contact|phone|number|ስልክ|ዋትስአፕ|qunnamtii|bilbila/.test(q);
+  const isUmrah = /umrah|ዑምራ/.test(q);
+  const isVisa = /visa|ቪዛ|viizaa/.test(q);
+  const isFlight = /flight|hotel|በረራ|ሆቴል|balali/.test(q);
+
+  if (language === 'am') {
+    if (isOffice) return 'የANAN TRAVEL ቢሮ በGarad Building, Welo Sefer, Addis Ababa ይገኛል። የስራ ሰዓት፦ ሰኞ–ዓርብ 8:30 AM–6:00 PM፣ ቅዳሜ 9:00 AM–3:00 PM።';
+    if (isWhatsApp) return 'በWhatsApp ለANAN TRAVEL ያግኙን፦ +251 960 555 000 📱';
+    if (isUmrah) return 'ANAN TRAVEL የዑምራ ጉዞ የቪዛ እገዛ፣ በረራ፣ በመካ እና መዲና ማረፊያ፣ የቡድን መጓጓዣ/መመሪያ እና ኢንሹራንስን እንደ ጥቅሉ ያቀርባል። የዋጋ ምሳሌ፦ ከ95,000 ETB ጀምሮ፣ 14 ቀን። የመጨረሻ ዋጋ በጽሁፍ ይረጋገጣል።';
+    if (isVisa) return 'ANAN TRAVEL ለቱሪስት፣ ለንግድ እና ለተማሪ ቪዛ የማመልከቻ መመሪያ እና የሰነድ ግምገማ ይሰጣል። የቪዛ ውሳኔ ግን በተዛማጅ ኤምባሲ/ባለስልጣን ነው።';
+    if (isFlight) return 'ANAN TRAVEL የአገር ውስጥና ዓለም አቀፍ በረራዎችን እና ሆቴሎችን ያግዛል። የተወሰነ ዋጋና መገኘት ለማረጋገጥ የጉዞ ቀን፣ መዳረሻ እና የተጓዦች ብዛት ይላኩ።';
+    return 'ሰላም! 👋 በረራ፣ ዑምራ፣ ቪዛ፣ የውጭ አገር ትምህርት፣ ዕረፍት ወይም የANAN TRAVEL ቢሮ መረጃ ላይ ልረዳዎ እችላለሁ። ምን ማወቅ ይፈልጋሉ?';
+  }
+
+  if (language === 'om') {
+    if (isOffice) return 'Waajjirri ANAN TRAVEL Garad Building, Welo Sefer, Addis Ababa keessa jira. Saʼaatiin hojii Wiixata–Jimaata 8:30 AM–6:00 PM, Sanbata 9:00 AM–3:00 PM.';
+    if (isWhatsApp) return 'WhatsApp irratti ANAN TRAVEL qunnamaa: +251 960 555 000 📱';
+    if (isUmrah) return 'ANAN TRAVEL imala Umrah keessatti gargaarsa viizaa, balaliʼinsa, bakka jireenyaa Makkaa fi Madiinaa, geejjiba/gorsa garee fi inshuraansii akka paakeejii irratti hammatametti ni kenna. Fakkeenya gatii: 95,000 ETB irraa eegala, guyyoota 14. Gatiin dhumaa barreeffamaan ni mirkanaaʼa.';
+    if (isVisa) return 'ANAN TRAVEL viizaa turistii, daldalaa fi barataa irratti qajeelfama iyyannoo fi sakattaʼinsa sanadootaa ni kenna. Murtiin viizaa garuu qaama mootummaa ykn embasii dhimmi ilaallatu bira jira.';
+    if (isFlight) return 'ANAN TRAVEL balaliʼinsa biyya keessaa fi idil-addunyaa akkasumas hoteelota irratti ni gargaara. Gatii fi argamummaa mirkaneessuuf guyyaa imalaa, bakka dhaquu fi baayʼina imaltootaa nuuf ergaa.';
+    return 'Akkam! 👋 Waaʼee balaliʼinsaa, Umrah, viizaa, barnoota biyya alaa, boqonnaa ykn waajjira ANAN TRAVEL irratti isin gargaaruu nan dandaʼa. Maal beekuu barbaaddu?';
+  }
+
+  if (isOffice) return 'ANAN TRAVEL is based at Garad Building, Welo Sefer, Addis Ababa. Office hours: Monday–Friday 8:30 AM–6:00 PM; Saturday 9:00 AM–3:00 PM.';
+  if (isWhatsApp) return 'You can reach ANAN TRAVEL on WhatsApp at +251 960 555 000 📱';
+  if (isUmrah) return 'ANAN TRAVEL can assist with Umrah visa support, flights, Makkah and Madinah accommodation, group transport/guidance and insurance according to the package. An indicative example is 14 days from 95,000 ETB per person. Final availability and pricing are confirmed in writing.';
+  if (isVisa) return 'ANAN TRAVEL provides guidance for tourist, business and student visa applications, including document review. Visa decisions and appointment availability remain with the relevant authorities.';
+  if (isFlight) return 'ANAN TRAVEL assists with domestic and international flights and hotels. To check a trip, send your destination, travel dates and number of travellers.';
+  return 'Hello! 👋 I can help with ANAN TRAVEL flights, Umrah, visas, study abroad, holidays and office information. What would you like to know?';
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -66,21 +96,18 @@ export async function POST(request: NextRequest) {
       .slice(-12)
       .map((message) => ({ role: message.role, content: message.content.slice(0, 3500) }));
 
-    if (!safeMessages.length) {
-      return NextResponse.json({ error: 'Please send a message.' }, { status: 400 });
-    }
+    if (!safeMessages.length) return NextResponse.json({ error: 'Please send a message.' }, { status: 400 });
 
     const apiKey = process.env.OPENAI_API_KEY;
+    const lastUserMessage = [...safeMessages].reverse().find((message) => message.role === 'user')?.content || '';
+
     if (!apiKey) {
-      return NextResponse.json({ error: 'AnanBot is not connected yet. Please contact ANAN TRAVEL on WhatsApp.' }, { status: 503 });
+      return NextResponse.json({ text: localFallback(language, lastUserMessage), fallback: true });
     }
 
     const response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-      },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
       body: JSON.stringify({
         model: process.env.ANANBOT_MODEL || 'gpt-5.6-luna',
         instructions: `${SITE_KNOWLEDGE}\n\nThe selected response language is ${languageNames[language]}. Always answer in ${languageNames[language]}.`,
@@ -92,6 +119,8 @@ export async function POST(request: NextRequest) {
     const data = await response.json();
     if (!response.ok) {
       console.error('AnanBot OpenAI error', data);
+      const quotaError = data?.error?.code === 'credit_balance_exhausted' || data?.error?.type === 'insufficient_quota';
+      if (quotaError) return NextResponse.json({ text: localFallback(language, lastUserMessage), fallback: true });
       return NextResponse.json({ error: 'AnanBot could not answer right now. Please try again or message ANAN TRAVEL on WhatsApp.' }, { status: 502 });
     }
 
@@ -101,10 +130,7 @@ export async function POST(request: NextRequest) {
         ? data.output.flatMap((item: any) => item?.content || []).map((item: any) => item?.text || '').filter(Boolean).join('\n')
         : '';
 
-    if (!text) {
-      return NextResponse.json({ error: 'I did not receive a complete answer. Please try again.' }, { status: 502 });
-    }
-
+    if (!text) return NextResponse.json({ text: localFallback(language, lastUserMessage), fallback: true });
     return NextResponse.json({ text });
   } catch (error) {
     console.error('AnanBot request error', error);
