@@ -1,0 +1,27 @@
+/* ANAN TRAVEL — standard responsive hamburger */
+@media (max-width: 1000px){
+  .ph-header-inner{width:calc(100% - 32px);display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .ph-nav{display:none!important}
+  .ph-header-actions{margin-left:auto;display:flex;align-items:center;gap:0}
+  .ph-login,.ph-header-cta{display:none!important}
+  .ph-menu{display:flex!important;position:relative;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;padding:0;border:0;background:transparent;color:var(--ph-ink);cursor:pointer;z-index:1102;-webkit-tap-highlight-color:transparent}
+  .ph-menu svg{width:24px;height:24px;stroke-width:1.8}
+  .ph-menu:focus-visible{outline:2px solid var(--ph-blue);outline-offset:3px;border-radius:4px}
+  .ph-mobile{display:block!important;position:fixed;z-index:1100;top:0;right:0;bottom:0;left:auto;width:min(420px,100vw);height:100dvh;background:#fff;transform:translateX(105%);visibility:hidden;opacity:0;pointer-events:none;overflow-y:auto;border-left:1px solid var(--ph-line);box-shadow:-24px 0 60px rgba(16,43,73,.12);transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .2s ease,visibility 0s linear .35s}
+  .ph-mobile.visible{transform:translateX(0);visibility:visible;opacity:1;pointer-events:auto;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .2s ease}
+  .ph-mobile-inner{min-height:100%;padding:92px 24px 32px}
+  .ph-mobile-kicker{font-size:9px;font-weight:800;letter-spacing:.15em;color:#8290a0;margin-bottom:20px}
+  .ph-mobile-links a{display:grid;grid-template-columns:28px 1fr 20px;align-items:center;gap:10px;padding:17px 0;border-bottom:1px solid var(--ph-line);color:var(--ph-ink);text-decoration:none}
+  .ph-mobile-links a>span{font-size:9px;color:#9aa7b4;font-weight:800}
+  .ph-mobile-links strong{display:block;font-size:17px}
+  .ph-mobile-links small{display:block;color:#778698;font-size:10px;margin-top:3px}
+  .ph-mobile-cta{margin-top:25px;width:100%;background:var(--ph-blue);color:#fff;display:flex;justify-content:center;align-items:center;gap:10px;padding:15px;border-radius:5px;font-weight:700;font-size:13px;text-decoration:none}
+  body:has(.ph-header.is-open){overflow:hidden}
+}
+@media (min-width:651px) and (max-width:1000px){
+  .ph-mobile-inner{padding-top:104px}
+}
+@media (max-width:650px){
+  .ph-header-inner{width:calc(100% - 24px)}
+  .ph-menu{width:42px;height:42px}
+}
