@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Facebook, Instagram, Linkedin, Music2, Youtube } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Music2, Youtube, Phone, Send, MessageCircle } from 'lucide-react';
 
 const whatsapp = 'https://wa.me/251960555000?text=Hello%20ANAN%20TRAVEL%2C%20I%20would%20like%20to%20chat%20with%20your%20team.';
 const socials = [
