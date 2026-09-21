@@ -1,0 +1,33 @@
+/* ANAN TRAVEL — equal logo wordmark sizing */
+.ph-logo,
+.ph-logo b {
+  font-family: Manrope, sans-serif;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -1.5px !important;
+}
+
+.ph-logo b {
+  color: var(--ph-ink) !important;
+  letter-spacing: -1.5px !important;
+  margin-left: 0 !important;
+}
+
+@media (max-width: 650px) {
+  .ph-logo,
+  .ph-logo b {
+    font-size: 20px !important;
+    letter-spacing: -1.25px !important;
+  }
+}
+
+/* Keep the footer wordmark balanced as well. */
+.site-footer-brand a,
+.site-footer-brand a span {
+  font-family: Manrope, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -1.7px !important;
+}
