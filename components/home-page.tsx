@@ -27,6 +27,14 @@ const stats = [
   ['1 team', 'from Addis Ababa'],
 ];
 
+const globeNodes = [
+  { code: 'ADD', flag: '🇪🇹', name: 'Ethiopia', className: 'ph-node-add' },
+  { code: 'DXB', flag: '🇦🇪', name: 'United Arab Emirates', className: 'ph-node-dxb' },
+  { code: 'JED', flag: '🇸🇦', name: 'Saudi Arabia', className: 'ph-node-jed' },
+  { code: 'LON', flag: '🇬🇧', name: 'United Kingdom', className: 'ph-node-lon' },
+  { code: 'DAR', flag: '🇹🇿', name: 'Tanzania', className: 'ph-node-dar' },
+];
+
 export default function HomePage() {
   return (
     <main className="payoneer-home">
@@ -44,20 +52,23 @@ export default function HomePage() {
           </div>
           <div className="ph-hero-visual" aria-label="ANAN global travel network">
             <div className="ph-globe">
+              <div className="ph-globe-orbit ph-globe-orbit-a" />
+              <div className="ph-globe-orbit ph-globe-orbit-b" />
               <div className="ph-globe-ring ph-globe-ring-a" />
               <div className="ph-globe-ring ph-globe-ring-b" />
               <div className="ph-globe-line ph-globe-line-a" />
               <div className="ph-globe-line ph-globe-line-b" />
-              <span className="ph-node ph-node-add">ADD</span>
-              <span className="ph-node ph-node-dxb">DXB</span>
-              <span className="ph-node ph-node-jed">JED</span>
-              <span className="ph-node ph-node-lon">LON</span>
-              <span className="ph-node ph-node-dar">DAR</span>
+              {globeNodes.map(node => (
+                <div className={`ph-node ${node.className}`} key={node.code} title={node.name} aria-label={`${node.name} ${node.code}`}>
+                  <span className="ph-node-flag" aria-hidden="true">{node.flag}</span>
+                  <span>{node.code}</span>
+                </div>
+              ))}
               <span className="ph-route ph-route-one" />
               <span className="ph-route ph-route-two" />
               <span className="ph-route ph-route-three" />
             </div>
-            <div className="ph-floating-card ph-card-route"><span>YOUR NEXT ROUTE</span><strong>ADD → DXB → JED</strong><small>One team. Every detail.</small></div>
+            <div className="ph-floating-card ph-card-route"><span>YOUR NEXT ROUTE</span><strong>🇪🇹 ADD → 🇦🇪 DXB → 🇸🇦 JED</strong><small>One team. Every detail.</small></div>
             <div className="ph-floating-card ph-card-price"><span>LOCAL SUPPORT</span><strong>ETB</strong><small>Pay locally when available</small></div>
           </div>
         </div>
