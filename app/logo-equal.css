@@ -1,25 +1,59 @@
-/* ANAN TRAVEL — equal logo wordmark sizing */
-.ph-logo,
-.ph-logo b {
-  font-family: Manrope, sans-serif;
+/* ANAN TRAVEL — equal wordmark + brand tagline */
+.ph-logo {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  color: var(--ph-blue) !important;
+  text-decoration: none !important;
+}
+
+.ph-logo-wordmark {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 7px !important;
+  font-family: Manrope, sans-serif !important;
   font-size: 24px !important;
   font-weight: 800 !important;
   line-height: 1 !important;
   letter-spacing: -1.5px !important;
+  color: var(--ph-blue) !important;
 }
 
-.ph-logo b {
-  color: var(--ph-ink) !important;
+.ph-logo-wordmark > span,
+.ph-logo-wordmark b {
+  font: inherit !important;
+  font-size: inherit !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
   letter-spacing: -1.5px !important;
-  margin-left: 0 !important;
+  color: var(--ph-blue) !important;
+  margin: 0 !important;
 }
 
-@media (max-width: 650px) {
-  .ph-logo,
-  .ph-logo b {
-    font-size: 20px !important;
-    letter-spacing: -1.25px !important;
-  }
+.ph-logo-tagline {
+  display: block !important;
+  margin: 0 !important;
+  color: var(--ph-blue) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 6.5px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: .17em !important;
+  white-space: nowrap !important;
+}
+
+/* Hero tagline follows the exact logo brand color. */
+.ph-hero-bottom span:first-child {
+  color: var(--ph-blue) !important;
+  font-weight: 800 !important;
+}
+
+/* Footer tagline follows the exact logo brand color. */
+.site-footer-brand p:first-of-type {
+  color: var(--ph-blue) !important;
+  font-weight: 700 !important;
 }
 
 /* Keep the footer wordmark balanced as well. */
@@ -30,4 +64,22 @@
   font-weight: 800 !important;
   line-height: 1 !important;
   letter-spacing: -1.7px !important;
+}
+
+@media (max-width: 650px) {
+  .ph-logo-wordmark {
+    font-size: 20px !important;
+    letter-spacing: -1.25px !important;
+  }
+
+  .ph-logo-wordmark > span,
+  .ph-logo-wordmark b {
+    font-size: 20px !important;
+    letter-spacing: -1.25px !important;
+  }
+
+  .ph-logo-tagline {
+    font-size: 5.5px !important;
+    letter-spacing: .14em !important;
+  }
 }
