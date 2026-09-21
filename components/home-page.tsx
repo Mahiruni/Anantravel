@@ -99,11 +99,46 @@ export default function HomePage() {
         <div className="ph-audience-grid">{audiences.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p><Link href="/contact">Learn more <ChevronRight size={16}/></Link></article>)}</div>
       </section>
 
+      <section className="ph-destinations">
+        <div className="container">
+          <div className="ph-section-head ph-destinations-head">
+            <div><p className="ph-kicker">WHERE COULD YOU GO?</p><h2>Journeys with a sense of <span>place.</span></h2></div>
+            <Link className="ph-button ph-button-link" href="/destinations">Explore all destinations <ArrowRight size={18}/></Link>
+          </div>
+          <div className="ph-destination-grid">
+            <Link href="/destinations" className="ph-destination ph-destination-large">
+              <Image src="/images/hero.jpg" alt="Travel destination" fill sizes="(max-width: 900px) 100vw, 55vw" />
+              <div className="ph-destination-shade" />
+              <div className="ph-destination-copy"><span>01 · HOME & HORIZONS</span><h3>Ethiopia</h3><p>Start close to home, then let the journey unfold.</p></div>
+            </Link>
+            <Link href="/destinations" className="ph-destination">
+              <Image src="/images/dubai.jpg" alt="Dubai skyline" fill sizes="(max-width: 900px) 100vw, 45vw" />
+              <div className="ph-destination-shade" />
+              <div className="ph-destination-copy"><span>02 · GULF</span><h3>Dubai</h3><p>City energy, stopovers and business travel.</p></div>
+            </Link>
+            <Link href="/destinations" className="ph-destination">
+              <Image src="/images/umrah.jpg" alt="Umrah journey" fill sizes="(max-width: 900px) 100vw, 45vw" />
+              <div className="ph-destination-shade" />
+              <div className="ph-destination-copy"><span>03 · PILGRIMAGE</span><h3>Makkah & Madinah</h3><p>A carefully coordinated Umrah journey.</p></div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="ph-story">
         <div className="container ph-story-grid"><div className="ph-story-image"><Image src="/images/umrah.jpg" alt="Umrah journey" fill sizes="(max-width: 900px) 100vw, 50vw"/></div><div className="ph-story-copy"><p className="ph-kicker">A JOURNEY WORTH TAKING</p><h2>Go somewhere that <span>stays with you.</span></h2><p>Discover Ethiopia, the Gulf and destinations beyond. Our team can build a trip around your purpose, pace and budget — not a template.</p><div className="ph-story-meta"><div><strong>14 days</strong><span>Featured Umrah</span></div><div><strong>Makkah + Madinah</strong><span>Thoughtfully arranged</span></div></div><Link className="ph-button ph-button-primary" href="/destinations">Discover journeys <ArrowRight size={18}/></Link></div></div>
       </section>
 
       <section className="ph-stats container">{stats.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</section>
+
+      <section className="ph-process">
+        <div className="container">
+          <div className="ph-section-head"><div><p className="ph-kicker">HOW IT WORKS</p><h2>Simple steps.<br/><span>Human support.</span></h2></div><p>You do not need to know every detail before you start. Bring us the destination and the purpose; we help shape the rest.</p></div>
+          <div className="ph-process-grid">
+            {[['01','Tell us your plan','Destination, dates, travellers and what matters to you.'],['02','We build the route','Options for flights, stays, visas and the practical details.'],['03','Travel with support','Clear next steps before departure and human help when needed.']].map(([num,title,text]) => <article key={num}><span>{num}</span><h3>{title}</h3><p>{text}</p><i><ArrowUpRight size={18}/></i></article>)}
+          </div>
+        </div>
+      </section>
 
       <section className="ph-final"><div className="container"><p className="ph-kicker">READY WHEN YOU ARE</p><h2>The world is closer<br/><span>than you think.</span></h2><p>Start with a question. We will help you take the next step.</p><div className="ph-actions"><Link className="ph-button ph-button-primary" href="/contact">Talk to ANAN TRAVEL <ArrowUpRight size={18}/></Link><a className="ph-button ph-button-link" href={wa('Hello ANAN TRAVEL, I would like help planning a journey.')}>WhatsApp us <ArrowRight size={18}/></a></div></div></section>
     </main>
