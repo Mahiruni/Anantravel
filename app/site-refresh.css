@@ -196,3 +196,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @media(prefers-reduced-motion:reduce){
   .content-hero .container,.content-grid article,.content-cta,.contact-layout{animation:none!important}
 }
+
+/* Header contrast lock: logo/tagline always contrast against the header surface */
+.ph-header:not(.is-scrolled) .ph-logo-wordmark,
+.ph-header:not(.is-scrolled) .ph-logo-wordmark span,
+.ph-header:not(.is-scrolled) .ph-logo-wordmark b{color:var(--anan-forest)!important}
+.ph-header:not(.is-scrolled) .ph-logo-wordmark b{color:var(--anan-forest)!important}
+.ph-header:not(.is-scrolled) .ph-logo-tagline{color:var(--anan-forest)!important;opacity:.72!important}
+.ph-header.is-scrolled .ph-logo-wordmark,
+.ph-header.is-scrolled .ph-logo-wordmark span,
+.ph-header.is-scrolled .ph-logo-wordmark b,
+.ph-header.is-scrolled .ph-logo-tagline{color:#fff!important;opacity:1!important}
