@@ -1,0 +1,22 @@
+/* ANAN TRAVEL — animated hero globe + destination flags */
+.ph-globe{animation:ph-globe-float 7s ease-in-out infinite!important}
+.ph-globe-orbit{position:absolute;inset:7%;border:1px solid rgba(23,76,145,.12);border-radius:50%;transform:rotate(22deg);animation:ph-orbit-spin 18s linear infinite}
+.ph-globe-orbit:after{content:'✦';position:absolute;left:3%;top:14%;font-size:13px;color:#dec390;text-shadow:0 0 15px rgba(222,195,144,.8)}
+.ph-globe-orbit-b{inset:13%;transform:rotate(-35deg) scaleY(.68);animation-duration:24s;animation-direction:reverse}
+.ph-globe-orbit-b:after{left:auto;right:3%;top:auto;bottom:12%;font-size:9px}
+.ph-globe-ring{animation:ph-ring-breathe 5s ease-in-out infinite}
+.ph-globe-ring-b{animation-delay:-2.5s}
+.ph-node{display:flex!important;align-items:center;justify-content:center;gap:4px;animation:ph-node-pulse 4s ease-in-out infinite}
+.ph-node-flag{font-size:15px;line-height:1}
+.ph-node-add{animation-delay:0s}.ph-node-dxb{animation-delay:-.8s}.ph-node-jed{animation-delay:-1.6s}.ph-node-lon{animation-delay:-2.4s}.ph-node-dar{animation-delay:-3.2s}
+.ph-route{overflow:visible!important}
+.ph-route:after{content:'';position:absolute;top:50%;left:0;width:6px;height:6px;border-radius:50%;background:#dec390;box-shadow:0 0 12px rgba(222,195,144,.9);transform:translate(-50%,-50%);animation:ph-route-travel 3.4s linear infinite}
+.ph-route-two:after{animation-delay:-1.1s}.ph-route-three:after{animation-delay:-2.1s}
+@keyframes ph-globe-float{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(0,-10px,0) rotate(1.2deg)}}
+@keyframes ph-orbit-spin{from{transform:rotate(22deg) rotateZ(0deg)}to{transform:rotate(22deg) rotateZ(360deg)}}
+@keyframes ph-ring-breathe{0%,100%{opacity:.55;transform:rotate(18deg) scale(.98)}50%{opacity:1;transform:rotate(18deg) scale(1.02)}}
+@keyframes ph-node-pulse{0%,100%{transform:scale(1);box-shadow:0 10px 25px rgba(16,43,73,.12)}50%{transform:scale(1.06);box-shadow:0 14px 30px rgba(23,76,145,.2)}}
+@keyframes ph-route-travel{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+@media(max-width:650px){.ph-globe{animation-name:ph-globe-float-mobile!important}.ph-node-flag{font-size:13px}.ph-node{width:52px!important;height:39px!important;font-size:7px!important}}
+@keyframes ph-globe-float-mobile{0%,100%{transform:translateX(50%) translateY(0) rotate(0)}50%{transform:translateX(50%) translateY(-7px) rotate(1deg)}}
+@media(prefers-reduced-motion:reduce){.ph-globe,.ph-globe-orbit,.ph-globe-ring,.ph-node,.ph-route:after{animation:none!important}}
