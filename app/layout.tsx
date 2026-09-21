@@ -7,6 +7,7 @@ import './hisabtech-credit.css';
 import './site-refresh.css';
 import './payoneer-refresh.css';
 import './mobile-menu-fix.css';
+import './logo-equal.css';
 import FullPageTranslator from '../components/full-page-translator';
 import AnanBot from '../components/anan-bot';
 import FooterCredit from '../components/footer-credit';
