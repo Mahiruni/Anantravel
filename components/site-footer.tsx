@@ -23,7 +23,13 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer-inner">
         <div className="site-footer-main">
-          <div className="site-footer-brand"><Link href="/">ANAN TRAVEL<span>✦</span></Link><p>Your pathway to exploration.</p><p>Thoughtful travel planning from Addis Ababa to the world.</p></div>
+          <div className="site-footer-brand">
+            <Link href="/" className="site-footer-logo" aria-label="ANAN TRAVEL home">
+              <img className="site-footer-logo-mark" src="/images/anan-travel-logo.svg" alt="" aria-hidden="true" />
+              <span className="site-footer-wordmark">ANAN TRAVEL</span>
+            </Link>
+            <p>Your pathway to exploration.</p><p>Thoughtful travel planning from Addis Ababa to the world.</p>
+          </div>
           <div><b>EXPLORE</b><Link href="/services">Services</Link><Link href="/destinations">Destinations</Link><Link href="/about">About us</Link><Link href="/faq">FAQ</Link></div>
           <div><b>CONTACT</b><a href="tel:+251960555000">+251 960 555 000</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:info@anantravel.com">info@anantravel.com</a><span>Garad Mall, Ground Floor<br/>Addis Ababa, Ethiopia</span></div>
           <div><b>START A JOURNEY</b><p>Tell us where you want to go. We will take care of the details.</p><Link className="footer-cta" href="/contact">Plan your journey <ArrowUpRight size={17}/></Link></div>
