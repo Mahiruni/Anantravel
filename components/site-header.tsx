@@ -39,7 +39,10 @@ export default function SiteHeader() {
     <header className={`ph-header ${scrolled ? 'is-scrolled' : ''} ${open ? 'is-open' : ''}`}>
       <div className="ph-header-inner">
         <Link className="ph-logo" href="/" onClick={() => { setOpen(false); setProductsOpen(false); }} aria-label="ANAN TRAVEL — Your pathway to exploration">
-          <span className="ph-logo-wordmark"><span>ANAN</span><b>TRAVEL</b></span>
+          <span className="ph-logo-wordmark">
+            <img className="ph-logo-mark" src="/images/anan-travel-logo.svg" alt="" aria-hidden="true" />
+            <span>ANAN</span><b>TRAVEL</b>
+          </span>
           <small className="ph-logo-tagline">YOUR PATHWAY TO EXPLORATION</small>
         </Link>
 
