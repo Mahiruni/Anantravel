@@ -1,4 +1,4 @@
-/* ANAN TRAVEL — official mark + wordmark */
+/* ANAN TRAVEL — equal wordmark + brand tagline */
 .ph-logo {
   display: inline-flex !important;
   flex-direction: column !important;
@@ -11,8 +11,8 @@
 
 .ph-logo-wordmark {
   display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
+  align-items: baseline !important;
+  gap: 7px !important;
   font-family: Manrope, sans-serif !important;
   font-size: 24px !important;
   font-weight: 800 !important;
@@ -21,15 +21,7 @@
   color: var(--ph-blue) !important;
 }
 
-.ph-logo-mark {
-  display: block !important;
-  width: 52px !important;
-  height: 25px !important;
-  flex: 0 0 auto !important;
-  object-fit: contain !important;
-}
-
-.ph-logo-wordmark > span:not(.ph-logo-mark),
+.ph-logo-wordmark > span,
 .ph-logo-wordmark b {
   font: inherit !important;
   font-size: inherit !important;
@@ -38,12 +30,6 @@
   letter-spacing: -1.5px !important;
   color: var(--ph-blue) !important;
   margin: 0 !important;
-}
-
-.ph-logo-wordmark b {
-  font-size: 12px !important;
-  letter-spacing: .08em !important;
-  color: var(--ph-ink) !important;
 }
 
 .ph-logo-tagline {
@@ -56,49 +42,44 @@
   line-height: 1 !important;
   letter-spacing: .17em !important;
   white-space: nowrap !important;
-  padding-left: 60px !important;
 }
 
-.site-footer-logo {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  margin: 0 0 6px !important;
-}
-
-.site-footer-logo-mark {
-  width: 62px !important;
-  height: 30px !important;
-  object-fit: contain !important;
-  display: block !important;
-  flex: 0 0 auto !important;
-  background: #fff !important;
-  border-radius: 6px !important;
-  padding: 2px 3px !important;
-}
-
-.site-footer-wordmark {
-  font: 800 32px/1 Manrope,sans-serif !important;
-  letter-spacing: -1.7px !important;
-  color: #fff !important;
-}
-
+/* Hero tagline follows the exact logo brand color. */
 .ph-hero-bottom span:first-child {
   color: var(--ph-blue) !important;
   font-weight: 800 !important;
 }
 
+/* Footer tagline follows the exact logo brand color. */
 .site-footer-brand p:first-of-type {
-  color: #d6bd86 !important;
+  color: var(--ph-blue) !important;
   font-weight: 700 !important;
 }
 
+/* Keep the footer wordmark balanced as well. */
+.site-footer-brand a,
+.site-footer-brand a span {
+  font-family: Manrope, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -1.7px !important;
+}
+
 @media (max-width: 650px) {
-  .ph-logo-wordmark { font-size: 20px !important; letter-spacing: -1.25px !important; }
-  .ph-logo-mark { width: 43px !important; height: 21px !important; }
-  .ph-logo-wordmark > span:not(.ph-logo-mark), .ph-logo-wordmark b { letter-spacing: -1.25px !important; }
-  .ph-logo-wordmark b { font-size: 10px !important; letter-spacing: .07em !important; }
-  .ph-logo-tagline { font-size: 5.5px !important; letter-spacing: .14em !important; padding-left: 51px !important; }
-  .site-footer-logo-mark { width: 52px !important; height: 25px !important; }
-  .site-footer-wordmark { font-size: 27px !important; }
+  .ph-logo-wordmark {
+    font-size: 20px !important;
+    letter-spacing: -1.25px !important;
+  }
+
+  .ph-logo-wordmark > span,
+  .ph-logo-wordmark b {
+    font-size: 20px !important;
+    letter-spacing: -1.25px !important;
+  }
+
+  .ph-logo-tagline {
+    font-size: 5.5px !important;
+    letter-spacing: .14em !important;
+  }
 }
